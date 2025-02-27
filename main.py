@@ -1,4 +1,4 @@
-from stats import word_counter
+from stats import word_counter, character_counter
 
 def get_book_text(filepath: str):
     with open(filepath) as f:
@@ -11,5 +11,8 @@ def main():
         print("Error: text could not be read.")
     word_count = word_counter(raw_text)
     print(f"{word_count} words found in the document")
+    character_count = character_counter(raw_text)
+    print(character_count)
+
     
 main()
